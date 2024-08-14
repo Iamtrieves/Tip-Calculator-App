@@ -1,0 +1,299 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    padding: 5rem 5rem 1px 5rem;
+    background-color: var(--Light-grayish-cyan);
+    margin: 0 auto 1px auto;
+}
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan2: hsl(186, 82%, 25%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: var(--White);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 850px;
+    /* width: 60%; */
+    height: auto;
+    padding: 2rem;
+}
+
+.background-view {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 2rem;
+}
+
+/* Empty State */
+/* Grid 1 Begins */
+
+.grid-1 p:nth-child(1) {
+    font-size: .6em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Input-1 of Grid 1 */
+
+
+.input-1 .icon {
+    position: absolute;
+}
+.input-2 .icon {
+    position: absolute;
+}
+input {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.icon {
+    padding: 17px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: end;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    border: none;    
+}
+
+.grid-1 p:nth-child(3) { 
+    font-size: .6em;
+    letter-spacing: 2px;
+    margin: 1.5rem 0rem .5rem 0rem;
+    /* select-tip */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-bottom: 40px;
+}
+
+.flex-item {
+    background-color: var(--Very-dark-cyan);
+    max-width: 115px;
+    min-width: 115px;
+    padding: .5rem .5rem;
+    text-align: center;
+    color: white;
+    font-size: .8em;
+    border-radius: 5px;
+}
+input.custom {
+    background-color: var(--Very-light-grayish-cyan);
+    max-width: 115px;
+    min-width: 115px;
+    padding: .5rem;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-size: .8em;
+    border-radius: 5px;
+    border: none;
+}
+input.custom::placeholder {
+    text-align: center;
+}
+/* .grid-1 p:nth-child(5) {
+    font-size: .1em;
+    letter-spacing: 2px;
+    margin: 1.5rem 0rem .5rem 0rem;
+} */
+.error-container {
+    display: flex;
+    justify-content: space-between;
+}
+.bill-error, .people-error, .select-tip-error {
+    font-size: .5em;
+    letter-spacing: 2px;
+    color: red;
+}
+
+
+
+
+/* Grid 2 */
+.grid-2 {
+    background-color: var(--Very-dark-cyan);
+    padding: 2rem 2rem 0rem 2rem;
+    border-radius: 10px;
+}
+.flex-container2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.flex-container2 p:nth-child(1) {
+    font-size: .7em;
+    color: var(--White);
+}
+.flex-container2 span {
+    font-size: .8em;
+    color: var(--Grayish-cyan);
+}
+.flex-container2 p:nth-child(2) {
+    font-size: 1.7em;
+    color: var(--Strong-cyan);
+}
+
+/* Flex-container3 */
+.flex-container3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.flex-container3 p:nth-child(1) {
+    font-size: .7em;
+    color: var(--White);
+}
+.flex-container3 span {
+    font-size: .8em;
+    color: var(--Grayish-cyan);
+}
+.flex-container3 p:nth-child(2) {
+    font-size: 1.7em;
+    color: var(--Strong-cyan);
+}
+
+button[class="reset"] {
+    width: 100%;
+    height: 40px;
+    background-color: var(--Dark-grayish-cyan2);
+    color: var(--Very-dark-cyan);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-size: .6em;
+    letter-spacing: 2px;
+}
+
+/* Empty State Ends */
+
+/* Active States */
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--Strong-cyan);
+}
+.selected {
+    cursor: pointer;
+    color: black;
+    background-color: var(--Strong-cyan);
+    transition: 0.6s;
+}
+button[class="reset"]:hover {
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+    transition: 0.6s;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        padding: 20px 30px;
+        max-width: 400px;
+        min-width: 400px;
+    }
+    .background-view {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        /* padding-top: 1px; */
+    }
+    /* Grid 1 */
+    .flex-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .flex-item {
+        max-width: 163px;
+        min-width: 163px;
+    }
+    input.custom {
+        max-width: 163px;
+        min-width: 163px;
+    }
+
+    /* Grid 2 */
+    .grid-2 {
+        padding: 1.2em .7em;
+    }
+    .flex-container2 {
+        margin-bottom: .8rem; 
+    }
+    .flex-container2 p:nth-child(1) {
+        font-size: .6em;
+        color: var(--White);
+    }
+    .flex-container2 p:nth-child(2) {
+        font-size: 1.5em;
+    }
+    
+    /* Flex-container3 */
+    .flex-container3 {
+        margin-bottom: 1rem;
+    }
+    .flex-container3 p:nth-child(1) {
+        font-size: .6em;
+    }
+    .flex-container3 p:nth-child(2) {
+        font-size: 1.5em;
+    }
+    input.input-field {
+        margin-bottom: -1rem;
+    }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 540px) {
+    body {
+        margin: 0 auto;
+        padding: 2rem 1px;
+    }
+    main {
+        max-width: 340px;
+        min-width: 340px;
+        margin: 2rem auto;
+    }
+    .flex-item {
+        max-width: 130px;
+        min-width: 130px;
+    }
+    input.custom {
+        max-width: 130px;
+        min-width: 130px;
+    }
+}
